@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>ToDo - Home</title>
+</head>
+<body>
+    <header class="headerSection"> 
+        <div class="headerContainer">
+            <img class="logo" src="{{ url_for('static', filename='/assets/logo.svg') }}" alt="Logo">
+        </div>
+    </header>
+    <div class="heroSection">
+        <div class="hero">
+            <div class="h1"> Pesquise sua tarefa por data:</div>
+            <div class="heroContainer">
+                <img class="" src="{{ url_for('static', filename='/assets/Calendário.svg') }}" alt="Icon Calendário">
+                <form action="filtrar" class="searchBox" method="post">
+                    <div class="inputContainer">
+                        <input type="text" placeholder="Digite a data desejada. Ex: 23/04/2023" name="filtro"> 
+                    </div>
+                
+            </div>
+            <div class="buttonContainer">
+                <button class="submitButton">
+                    <a class="linkButton">
+                        Buscar
+                    </a>
+                </button>
+            </div> 
+        </form>
+        </div>
+    </div>
+
+    <div class="taskSection" id="task">
+        <div class="taskList">
+            <div class="titleContainer"> 
+                <div class="h1"> Sua lista de tarefas: </div>
+                <div class="buttonContainerAdd">
+                    <form action="irParaAdicionar" method="post">
+                    <button class="addButton" type="submit">
+                        <a class="linkButtonAdd" href="">
+                            <img class="" src= "{{ url_for('static', filename='/assets/Símbolo Adicionar.svg') }}" alt="Icon Adicionar">
+                        </a>
+                    </button>
+                </form>
+                </div>
+            </div>
+            {{id}}
+                <div class="taskContainer">
+                    {% for element in data %}
+                    <div class="h2"> {{element["dia"]}} </div>
+                    <div class="task">
+                        <div class="{{element['classe']}}"></div>
+                        <div class="taskBody"> 
+                            <p class="h4"> {{element["tarefa"]}} </p>
+                            <div class="options">
+                                    <button class="startButton" type="submit"> 
+                                        <a class="linkButtonStart" href="{{url_for('iniciar_tarefa', id=element['id'])}}" >
+                                            Iniciar
+                                        </a>
+                                    </button>
+            
+                                <button class="endButton"> 
+                                    <a class="linkButtonEnd" href="{{url_for('finalizar_tarefa', id=element['id'])}}">
+                                        Finalizar
+                                    </a>
+                                </button>
+                                    <a class="" href="{{url_for('editar_tarefa', id=element['id'])}}">
+                                        <img class="" src="{{ url_for('static', filename='/assets/Lápis.svg') }}" alt="Icon Lápis">
+                                    </a>
+                                    <a class="" href="{{url_for('deletar_tarefa', id=element['id'])}}">
+                                        <img class="" src= "{{ url_for('static', filename='/assets/Lixeira.svg') }}"  alt="Icon Lixeira">
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

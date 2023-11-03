@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+   
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+
+.container {
+    width: 1440px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+} 
+
+/* Header */
+.headerSection{
+    background-color: #9BCFFF;
+    width: 100%;
+    height: 80px; 
+    display: flex;
+   justify-content: center;
+}
+
+/* Hero */
+.h1{
+    color: #000;
+    font-family: Sora;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%
+}
+
+.heroSection{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    margin-top: 96px;
+}
+
+.hero{
+    width: 100%;
+    max-width: 1344px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 96px;
+}
+
+.heroContainer{
+    display: flex;
+    padding: 18px 21px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background: #D7ECFF;
+    gap: 20px;
+}
+
+.searchBox{
+    width: 100%;
+    max-width: 1344px;
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+}
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.form input[type=text],input[type=text]{
+    padding: 14px 600px 13px 20px; 
+    height: 89px;
+    border-radius: 20px;
+    background:  #FFF;
+    background-blend-mode: darken;
+    border: none;
+    color: #000;
+    font-family: Sora;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  ::placeholder{
+    color:  #7F7F7F;
+    padding: 0px 600px 0px 0px;
+    font-family: Roboto Slab;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+.buttonContainer{
+    margin-bottom: 96px;
+  }
+.submitButton{
+    display: inline-flex;
+    padding: 10px 45px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #000F5F;
+    background-blend-mode: darken;
+    border: none;
+}
+
+.linkButton{
+    color:  #FFF;
+    font-family: Sora;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; 
+    text-decoration: none;
+}
+
+.submitButton:hover{
+    background-color: #1028A9;
+  }
+
+
+/* Seção de tarefas */
+.taskSection{
+        width: 100%;
+        display: flex;
+        justify-self: center;
+        align-items: center;
+        margin-top: 40px;
+        margin-bottom: 96px;
+}
+
+.taskList{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap:54px;
+}
+
+.h2{
+    color: #000;
+    font-family: Sora;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120% 
+}
+.titleContainer{
+    width: 100%;
+    max-width: 1344px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.taskContainer{
+    max-width: 1344px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.addButton{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 72px;
+    height: 72px;
+    border-radius: 100%;
+    background: #84C4FF;
+    background-blend-mode: darken;
+    border: none;
+}
+.addButton:hover{
+    background-color: #54ADFF;
+  }
+.h4{
+    color: #000;
+    font-family: Sora;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.categoryRed{
+    width: 28px;
+    height: 70px;
+    border-radius: 15px 0px 0px 15px;
+    background: #FF8484;
+    background-blend-mode: darken;
+}
+.categoryGreen{
+    width: 28px;
+    height: 70px;
+    border-radius: 15px 0px 0px 15px;
+    background: #B3F484;
+    background-blend-mode: darken;
+}
+.categoryYellow{
+    width: 28px;
+    height: 70px;
+    border-radius: 15px 0px 0px 15px;
+    background: #F4F384;
+    background-blend-mode: darken;
+}
+
+.task{
+    width: 1280px;
+    height: 70px;
+    border-radius: 15px;
+    background: #F4F4F4;
+    display: flex;
+    align-items: center;
+}
+
+.taskBody{
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.startButton{
+    width: 90px;
+    height: 29px;
+    padding: 10px 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid #11D500;  
+    background: #CEFFB6;
+}
+
+.linkButtonStart{
+    color:#086700;
+    text-decoration: none;
+    font-family: Sora;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.endButton{
+    width: 90px;
+    height: 29px;
+    padding: 10px 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid #D50000;  
+    background: #FFB6B6;
+}
+
+.linkButtonEnd{
+    color: #670000;
+    text-decoration: none;
+    font-family: Sora;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+
+
